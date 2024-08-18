@@ -1,0 +1,21 @@
+{"story" : {
+	"rooms": {
+		"room_0" : "One day, you walk into the room. There is excitement in the air, as if something big is going to happen today. You can't stand the anticipation. 'It is gonna be a good day', you say to yourself.",
+ 		"room_1" : "Hello, this is room one.",
+		"room_2" : "Hello, this is room two.",
+		"room_3" : "Hello, this is room three."
+		},
+	
+	"responses" : {
+		"1" : "Why do you want to hurt me so?",
+		"2" : "24601", 
+		"3" : "Ha Ha",
+		"4" : "Clearly, you don't understand how this works.",
+		"5" : "What are you looking for, easter eggs?",
+		"6" : "What are you up to?",
+		"7" : "This does not even deserve a Captain's Log introduction.",
+		"8" : "I'm working on it!"
+ 
+		 }
+	}
+}
