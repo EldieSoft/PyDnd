@@ -1,0 +1,42 @@
+{"story" : { 
+	"rooms": {
+		"room_0" : {
+			"message" : "Hello, this is the middle room. Above is room one, to the left is room two, to the right, room three, and below is room four.",
+			"connected_rooms" : ["room_1", "room_2", "room_3", "room_4"],
+			"available_dir" : ["up", "left", "right", "down"]
+		},
+ 		"room_1" : { 
+			"message" : "Hello, this is room one. Below is the middle room.",
+			"connected_rooms" : ["room_0"],
+			"available_dir" : ["down"]
+		},
+		"room_2" : {
+			"message" : "Hello, this is room two. To the right is the middle room.",
+			"connected_rooms" : ["room_0"],
+			"available_dir" : ["right"]
+		},
+		"room_3" : {
+			"message" : "Hello, this is room three. To the left is the middle room.",
+			"connected_rooms" : ["room_0"],
+			"available_dir" : ["left"]
+		},
+		"room_4" : {
+			"message" : "Hello, this is room four. Above is the middle room.",
+			"connected_rooms" : ["room_0"],
+			"available_dir" : ["up"]
+		}
+	},
+	
+	"responses" : {
+		"1" : "Why do you want to hurt me so?",
+		"2" : "24601", 
+		"3" : "Ha Ha",
+		"4" : "Clearly, you don't understand how this works.",
+		"5" : "What are you looking for, easter eggs?",
+		"6" : "What are you up to?",
+		"7" : "This does not even deserve a Captain's Log introduction.",
+		"8" : "I'm working on it!"
+ 
+		 }
+	}
+}
