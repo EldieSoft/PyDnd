@@ -1,4 +1,8 @@
-<h1>PyDnd - Version 0.0.1 - Class Debug Demo</h1>
+<h1>PyDnd - Version 0.0.2 - Sage DM Test</h1>
+
+Improvements - Added new Sage DM, to facilitate storytelling.
+Updated JSON file format for making adventures.
+Still very much a work in progress.
 
 This is my basic class demo for my new single player DND Client. 
 
