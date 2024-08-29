@@ -1,10 +1,8 @@
-<h1>PyDnd - Version 0.0.3 - Sage DM Test</h1>
+<h1>SageDM - 0.1.1</h1>
 
-Improvements - Minor bug fixes.
-Added new data to JSON file.
-Still very much a work in progress.
-
-This is my basic class demo for my new single player DND Client. 
+Minor update
+cleaned up code
+-removed useless code/files
 
 Compilation:
 
