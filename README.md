@@ -1,6 +1,16 @@
-<h1>SageDM - Version 0.1</h1>
+<h1>SageDM Alpha 2- (Version 0.2)</h1>
 
-Here is the first playable demo of SageDM (formerly called PyDnd), an open-source, text-adventure engine made in Python. To play, compile using the instructions below, choose option 3: 'Sage DM Demo,' and type 'start.' It's a very simple text-adventure, but it works well as a tech demo.
+Complete overhaul of main.py.
+Updates:
++custom adventure mode - ability to run user made maps (w/ guide txt file)
+
+Removed:
+
+-redundant menu systems
+
+-useless debug features
+
+--------------------------------------------------------
 
 Compilation:
 
