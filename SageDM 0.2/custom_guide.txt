@@ -1,0 +1,64 @@
+Guide for creating custom adventures for SageDM.
+
+Having JSON knowledge will help, but not required.
+
+File structure is as follows:
+
+example_file - home directory
+|
+| data.json - data file (folder can be called anything, but JSON file MUST be called data.json)
+
+
+Inside data.json: (comments are included in parentheses, do not include in own code)
+
+{"story" : {
+	"title" : "My Map", (whatever you want the name to be.)
+	"help" : "This message shows up whenever the player types 'help'",
+	"rooms" : {
+		"main" : { (main room must be called "main")
+			"message" : "This is the main room.\nTo the left is room 1 and to the right is room 2.\n", (the '\n' indicates a new line, a la Python.)
+			"items" : null, (items are declared in this field)
+			"connected_rooms" : ["room_1", "room_2"],
+			"available_dir" : ["left", "right"], (dir must match up to rooms they go to, e.g. "room_1" and "left" are both 0 in the list.)
+			"obstacles" : null
+		    },
+		"room_1" : {
+			"message" : "This is room 1.\nTo the right is the main room.\n",
+			"items" : ["key"], (if a room has an item, it is declared in an array.)
+			"connected_rooms" : ["main"],
+			"available_dir" : ["right"],
+			"obstacles" : null
+			},
+		"room_2" : {
+			"message" : "This is room 2.\nTo the left is the main room.\n",
+			"items" : null,
+			"connected_rooms" : ["main"],
+			"available_dir" : ["left"],
+			"obstacles" : "door" (the player cannot enter this room until they have collected the key from room_1)
+			}
+	    	},
+	"items" : { (all items listed above need to be declared. If there are 2 of the same item, it only needs to be listed once.)
+		"key" : {
+			"message" : "Opens door." (message prints when 'inv is typed')
+		    }
+		},
+	"obstacles" : { (same as the items, if declared in a room, it needs to be declared here.)
+		"door" : { 
+			"is_passable" : false,
+			"victory_condition" : true, (when the door is opened, the game end message plays)
+			"message_stopped" : "The door is locked.",
+			"message_passed" : "You unlocked the door",
+			"req_item" : "key" (when player has 'key' in inv, door opens)
+			}
+		}
+	}
+
+}
+
+
+___________________________________________________________________________________________________________________________________________________
+
+This should get you started. When I update the project, I'll also update the instructions.
+While backwards compatibility is important to me, some updates may break old custom adventure packs.
+
+Code w/o comments in 'test' folder. Play this map by typing 'custom' and then 'test' at the prompt.
