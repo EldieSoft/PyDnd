@@ -1,0 +1,117 @@
+{"story" : {
+	"title" : "My House",
+	"help" : "There is a safe in the master bedroom, and you need to find the code! Type a direction (left, right, up or down) to go there, or type 'take' to enter take mode.\nType 'inv' to check inventory, type 'look' to look. Type 'talk' to talk.\nType 'clear' to clear screen.\n\nType 'quit' to quit at any time.",
+	"rooms" : {
+		"main" : {
+			"message" : "This is the living room.\nTo the left is the master bedroom, to the right is the dining room. Up is the hallway.",
+			"items" : null,
+			"connected_rooms" : ["Hallway", "Master_room", "Dining_room"],
+			"available_dir" : ["up", "left", "right"],
+			"obstacles" : null,
+			"NPCs" : "Larry"
+			},
+		"Hallway" : {
+			"message" : "This is the hallway.\nDown is the living room, to the left is the bathroom. Up is the boy's room, right is the girl's room.",
+			"items" : null,
+			"connected_rooms" : ["Boys_room", "Bathroom", "Girls_room", "main"],
+			"available_dir" : ["up", "left", "right", "down"],
+			"obstacles" : "door",
+			"NPCs" : null
+			},
+		"Girls_room" : {
+			"message" : "This is the girl's room.\nTo the left is the hallway.",
+			"items" : ["key"],
+			"connected_rooms" : ["Hallway"],
+			"available_dir" : ["left"],
+			"obstacles" : null,
+			"NPCs" : null
+			},
+		"Boys_room" : {
+			"message" : "This is the boy's room.\nDown is the hallway.",
+			"items" : ["code"],
+			"connected_rooms" : ["Hallway"],
+			"available_dir" : ["down"],
+			"obstacles" : "door",
+			"NPCs" : null
+			},
+		"Bathroom" : {
+			"message" : "This is the bathroom.\nTo the right is the hallway.",
+			"items" : null,
+			"connected_rooms" : ["Hallway"],
+			"available_dir" : ["right"],
+			"obstacles" : null,
+			"NPCs" : null
+			},
+		"Master_room" : {
+			"message" : "This is the master bedroom.\nTo the right is the living room.",
+			"items" : null,
+			"connected_rooms" : ["main"],
+			"available_dir" : ["right"],
+			"obstacles" : "safe",
+			"NPCs" : null
+			},
+		"Dining_room" : {
+			"message" : "This is the dining room.\nTo the left is the living room, to the right is the kitchen.",
+			"items" : null,
+			"connected_rooms" : ["main", "Kitchen"],
+			"available_dir" : ["left", "right"],
+			"obstacles" : null,
+			"NPCs" : null
+			},
+		"Kitchen" : {
+			"message" : "This is the kitchen.\nTo the left is the dining room, down is the laundry room.",
+			"items" : ["key"],
+			"connected_rooms" : ["Dining_room", "Laundry_room"],
+			"available_dir" : ["left", "down"],
+			"obstacles" : null,
+			"NPCs" : null
+			},
+		"Laundry_room" : {
+			"message" : "This is the laundry room.\nUp is the kitchen.",
+			"items" : null,
+			"connected_rooms" : ["Kitchen"],
+			"available_dir" : ["up"],
+			"obstacles" : null,
+			"NPCs" : "Coach McGuirk"
+			}
+		},
+	"items" : {
+		"key" :  {
+			"message" : "Opens door."
+			},
+		"code" : {
+			"message" : "Opens safe."
+			}
+		},
+	"obstacles" : {
+		"door" : {
+			"is_passable" : false,
+			"victory_condition" : false,
+			"message_stopped" : "The door is locked.",
+			"message_passed" : "You unlocked the door.",
+			"req_item" : "key"
+			},
+		"safe" : {
+			"is_passable" : true,
+			"victory_condition" : true,
+			"message_stopped" : "The safe is locked.",
+			"message_passed" : "You unlocked the safe",
+			"req_item" : "code"
+			}	
+		},
+	"NPCs" : {
+		"Larry" : {
+			"message_1" : "Heyo, it's me, Lazy Larry!!",
+			"message_2" : "I'm so lazy, I don't move from my chair often!!",
+			"message_3" : "Heavens to Betsy, I'm so lazy!!",
+			"message_4" : "Holy cow! I'm lazy!!"
+			},
+		"Coach McGuirk" : {
+			"message_1" : "I said put that cheese on me.",
+			"message_2" : "Brendon, get in the goal!",
+			"message_3" : "And I'll race! To feel the wind in my face!",
+			"message_4" : "I'M HAVING A HEART ATTACK"
+			}
+		}
+	}
+}
