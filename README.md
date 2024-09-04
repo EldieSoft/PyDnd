@@ -1,14 +1,9 @@
-<h1>SageDM Alpha 2- (Version 0.2)</h1>
+<h1>SageDM Alpha 3 - (Version 0.3 - Early NPC test)</h1>
 
-Complete overhaul of main.py.
 Updates:
-+custom adventure mode - ability to run user made maps (w/ guide txt file)
 
-Removed:
 
--redundant menu systems
-
--useless debug features
++added two test NPCs, Coach McGuirk (from Home Movies) is located in the Laundry Room, Lazy Larry is located in the Living Room. Talk to these NPCs by typing 'talk'. Each NPC has 4 phrases they can say.
 
 --------------------------------------------------------
 
