@@ -1,0 +1,44 @@
+{"story" : {
+	"title" : "My Map",
+	"help" : "This message shows up whenever the player types 'help'",
+	"rooms" : {
+		"main" : {
+			"message" : "This is the main room.\nTo the left is room 1 and to the right is room 2.\n",
+			"items" : null,
+			"connected_rooms" : ["room_1", "room_2"],
+			"available_dir" : ["left", "right"],
+			"obstacles" : null
+		    },
+		"room_1" : {
+			"message" : "This is room 1.\nTo the right is the main room.\n",
+			"items" : ["key"],
+			"connected_rooms" : ["main"],
+			"available_dir" : ["right"],
+			"obstacles" : null
+			},
+		"room_2" : {
+			"message" : "This is room 2.\nTo the left is the main room.\n",
+			"items" : null,
+			"connected_rooms" : ["main"],
+			"available_dir" : ["left"],
+			"obstacles" : "door"
+			}
+	    	},
+	"items" : {
+		"key" : {
+			"message" : "Opens door."
+		    }
+		},
+	"obstacles" : {
+		"door" : { 
+			"is_passable" : false,
+			"victory_condition" : true,
+			"message_stopped" : "The door is locked.",
+			"message_passed" : "You unlocked the door",
+			"req_item" : "key"
+			}
+		}
+	}
+
+}
+
