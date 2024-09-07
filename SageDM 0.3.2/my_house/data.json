@@ -1,0 +1,143 @@
+{"story" : {
+	"title" : "My House",
+	"help" : "There is a safe in the master bedroom, and you need to find the code! Type a direction (left, right, up or down) to go there, or type 'take' to enter take mode.\nType 'inv' to check inventory, type 'look' to look. Type 'talk' to talk.\nType 'clear' to clear screen.\n\nType 'quit' to quit at any time.",
+	"rooms" : {
+		"main" : {
+			"message" : "This is the living room.\nTo the left is the master bedroom, to the right is the dining room. Up is the hallway.",
+			"items" : null,
+			"connected_rooms" : ["Hallway", "Master_room", "Dining_room"],
+			"available_dir" : ["up", "left", "right"],
+			"obstacles" : null,
+			"NPCs" : "Lazy Larry"
+			},
+		"Hallway" : {
+			"message" : "This is the hallway.\nDown is the living room, to the left is the bathroom. Up is the boy's room, right is the girl's room.",
+			"items" : null,
+			"connected_rooms" : ["Boys_room", "Bathroom", "Girls_room", "main"],
+			"available_dir" : ["up", "left", "right", "down"],
+			"obstacles" : "door",
+			"NPCs" : null
+			},
+		"Girls_room" : {
+			"message" : "This is the girl's room.\nTo the left is the hallway.",
+			"items" : null,
+			"connected_rooms" : ["Hallway"],
+			"available_dir" : ["left"],
+			"obstacles" : null,
+			"NPCs" : null
+			},
+		"Boys_room" : {
+			"message" : "This is the boy's room.\nDown is the hallway.",
+			"items" : ["code"],
+			"connected_rooms" : ["Hallway"],
+			"available_dir" : ["down"],
+			"obstacles" : "door",
+			"NPCs" : null
+			},
+		"Bathroom" : {
+			"message" : "This is the bathroom.\nTo the right is the hallway.",
+			"items" : ["sleep mask"],
+			"connected_rooms" : ["Hallway"],
+			"available_dir" : ["right"],
+			"obstacles" : null,
+			"NPCs" : null
+			},
+		"Master_room" : {
+			"message" : "This is the master bedroom.\nTo the right is the living room.",
+			"items" : null,
+			"connected_rooms" : ["main"],
+			"available_dir" : ["right"],
+			"obstacles" : "safe",
+			"NPCs" : null
+			},
+		"Dining_room" : {
+			"message" : "This is the dining room.\nTo the left is the living room, to the right is the kitchen.",
+			"items" : null,
+			"connected_rooms" : ["main", "Kitchen"],
+			"available_dir" : ["left", "right"],
+			"obstacles" : null,
+			"NPCs" : null
+			},
+		"Kitchen" : {
+			"message" : "This is the kitchen.\nTo the left is the dining room, down is the laundry room.",
+			"items" : ["key"],
+			"connected_rooms" : ["Dining_room", "Laundry_room"],
+			"available_dir" : ["left", "down"],
+			"obstacles" : null,
+			"NPCs" : null
+			},
+		"Laundry_room" : {
+			"message" : "This is the laundry room.\nUp is the kitchen, down is the backyard.",
+			"items" : null,
+			"connected_rooms" : ["Kitchen", "Backyard"],
+			"available_dir" : ["up", "down"],
+			"obstacles" : null,
+			"NPCs" : "Coach McGuirk"
+			},
+		"Backyard" : {
+			"message" : "This is the backyard.\nUp is the laundry room.",
+			"items" : null,
+			"connected_rooms" : ["Laundry_room"],
+			"available_dir" : ["up"],
+			"obstacles" : null,
+			"NPCs" : "Billy Mitchell"
+			}	
+		},
+	"items" : {
+		"key" :  {
+			"message" : "Opens door."
+			},
+		"code" : {
+			"message" : "Opens safe."
+			},
+		"sleep mask" : {
+			"message" : "It's just a towel with a rubber band around it."
+			},
+		"5 dollars" : {
+			"message" : "5 pieces of legal tender."
+			},
+		"gamer plaque" : {
+			"message" : "A regular plaque, with 'Greatest gamer of all time' written on it with a black marker."
+			}
+		},
+	"obstacles" : {
+		"door" : {
+			"is_passable" : false,
+			"victory_condition" : false,
+			"message_stopped" : "The door is locked.",
+			"message_passed" : "You unlocked the door.",
+			"req_item" : "key"
+			},
+		"safe" : {
+			"is_passable" : true,
+			"victory_condition" : true,
+			"message_stopped" : "The safe is locked.",
+			"message_passed" : "You unlocked the safe",
+			"req_item" : "code"
+			}	
+		},
+	"NPCs" : {
+		"Lazy Larry" : {
+			"message_default" : "Honk...mi mi mi mi mi mi...",
+			"message_quest" : "*YAWN* Oh, hello. I'm so tired, but it's too bright in here.\nCould you get me a sleep mask? I'll pay you for it.",
+			"message_passed" : "Thank you so much! Here's the money!",
+			"req_item" : "sleep mask",
+			"give_item" : "5 dollars"
+			},
+		"Coach McGuirk" : {
+			"message_default" : "Hey, buddy. Could you loan me $5 more bucks?",
+			"message_quest" : "Hey, buddy, could I borrow 5 bucks?\nIf you give it to me, I'll give you this stupid plaque I found.",
+			"message_passed" : "Hey, thanks. Here's the plaque.\nIt's got Sharpie all over it, so I'm not sure if it's worth anything.",
+			"req_item" : "5 dollars",
+			"give_item" : "gamer plaque"
+			},
+		"Billy Mitchell" : {
+			"message_default" : "I'm Billy Mitchell, Greatest Gamer of All Time.",
+			"message_quest" : "Hello, it is I, Billy Mitchell. Yes, THAT Billy Mitchell.\nHey, listen, I'm in a bit of a pickle. I've seemed to misplace my plaque that says I'm the greatest gamer of all time. Could you get it back for me?\nI'll give you this key I found if you do.",
+			"message_passed" : "Finally! Now everybody will know that I'm the proverbial 'King of Kong.'\nHere's the key!",
+			"req_item" : "gamer plaque",
+			"give_item" : "key"
+			}
+		}
+	}
+}
