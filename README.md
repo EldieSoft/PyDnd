@@ -1,10 +1,16 @@
-<h1>SageDM Alpha 3 - (Version 0.3 - Early NPC test)</h1>
+<h1>SageDM Alpha 3.2 (v. 0.3.2) - NPC gameplay</h1>
 
-Updates:
+<h3>HUGE UPDATE:</h3>
 
+Now you can actually play with the NPCs.
 
-+added two test NPCs, Coach McGuirk (from Home Movies) is located in the Laundry Room, Lazy Larry is located in the Living Room. Talk to these NPCs by typing 'talk'. Each NPC has 4 phrases they can say.
+Until this update, the NPC would just say 1 of 4 random phrases, but now they can have item quests, and can give the player an item for completing a quest.
 
+This adds depth to the engine, as now you do not need to only find items on the floor, but can get needed items from NPCs. After this, my main focus will be combat, 
+
+which will be stored in the same Python module, and use similar, though not identical, code.
+
+Enjoy!
 --------------------------------------------------------
 
 Compilation:
