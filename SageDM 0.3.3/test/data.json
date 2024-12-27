@@ -1,0 +1,56 @@
+{"story" : {
+	"title" : "My Map",
+	"help" : "This message shows up whenever the player types 'help'",
+	"rooms" : {
+		"main" : {
+			"message" : "This is the main room.\nTo the left is room 1 and to the right is room 2.\n",
+			"items" : null,
+			"connected_rooms" : ["room_1", "room_2"],
+			"available_dir" : ["left", "right"],
+			"obstacles" : null,
+			"NPCs" : "Tom"
+		    },
+		"room_1" : {
+			"message" : "This is room 1.\nTo the right is the main room.\n",
+			"items" : ["key"],
+			"connected_rooms" : ["main"],
+			"available_dir" : ["right"],
+			"obstacles" : null,
+			"NPCs" : null
+			},
+		"room_2" : {
+			"message" : "This is room 2.\nTo the left is the main room.\n",
+			"items" : null,
+			"connected_rooms" : ["main"],
+			"available_dir" : ["left"],
+			"obstacles" : "door",
+			"NPCs" : null
+			}
+	    	},
+	"items" : {
+		"key" : {
+			"message" : "Opens door."
+		    }
+		},
+	"obstacles" : {
+		"door" : { 
+			"is_passable" : false,
+			"victory_condition" : true,
+			"message_stopped" : "The door is locked.",
+			"message_passed" : "You unlocked the door",
+			"req_item" : "key"
+			}
+		},
+	"NPCs" : {
+		"Tom" : {
+			"message_default" : "Hello, this is a default message.",
+			"message_quest" : "This is the quest message, the game will not show this if the req_item is null",
+			"message_passed" : "The game will only show this message if the player has req_item in their inv.",
+			"req_item" : null,
+			"give_item" : null
+			}
+		}
+	}
+
+}
+
